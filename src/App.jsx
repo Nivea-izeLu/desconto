@@ -1,17 +1,30 @@
-import Informacoes from "./components/informacoes";
-import Usuario from "./components/usuario";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import SeletorCliente  from "./components/seletor/SeletorCliente";
+import EntradaValor from "./components/entrada/EntradaValor";
+import BotaoCalcular from "./components/botao/BotaoCalcular";
+import Resultado from "./components/resultado/Resultado";
 
 function App() {
+
   return (
+    
+    
     <div>
 
-      <h1>Exemplo Aula React</h1>
+      <Header />
 
-      <Informacoes />
+        <div>
+          
+            <EntradaValor />
+            <SeletorCliente />
+            <BotaoCalcular />
+            <Resultado />
 
-      <hr />
+            <h4> Você recebeu um ótimo desconto! </h4>
+        </div>
 
-      <Usuario />
+      <Footer />
 
     </div>
   );
