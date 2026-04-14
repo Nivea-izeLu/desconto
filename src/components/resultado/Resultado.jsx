@@ -8,23 +8,27 @@ export function Resultado () {
     const valor = EntradaValor()
     const cliente = SeletorCliente()
 
-    if (cliente === "comum") {
+    function result () {
 
-        return (`Você é um cliente comum com 5% de desconto. Valor Final: R$ ${desconto}`)
+        if (cliente === "comum") {
 
-    }else if (cliente === "parceiro") {
+            return (`Você é um cliente comum com 5% de desconto. Valor Final: R$ ${valor - desconto}`)
 
-        return (`Você é um cliente parceiro com 15% de desconto. Valor Final: R$ ${desconto}`)
-    
-    } else if (cliente === "funcionario") {
+        }else if (cliente === "parceiro") {
 
-        return (`Você é um cliente funcionário com 30% de desconto. Valor Final: R$ ${desconto}`)   
-    
-    } else if (cliente === "vip") {
+            return (`Você é um cliente parceiro com 15% de desconto. Valor Final: R$ ${valor - desconto}`)
+        
+        } else if (cliente === "funcionario") {
 
-        return (`Você é um cliente VIP com 20% de desconto. Valor Final: R$ ${desconto}`)
+            return (`Você é um cliente funcionário com 30% de desconto. Valor Final: R$ ${valor - desconto}`)   
+        
+        } else if (cliente === "vip") {
+
+            return (`Você é um cliente VIP com 20% de desconto. Valor Final: R$ ${valor - desconto}`)
+        }
+
     }
-
    
+    return (result())
 
-}
+} 

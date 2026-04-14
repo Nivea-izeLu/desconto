@@ -7,8 +7,8 @@ export function EntradaValor () {
             const input = document.getElementById('input');
             const valor = input.value;
 
-            return ( valor)
+            return ( valor)  
     }
     
-    return (valor)
+    return (input())
 }
